@@ -4,18 +4,14 @@
     --dark_color: #ffffff86;
     --complementary_color: #daa520;
     --accent_color: #629962;
- 
 }
-
 *{
     /* filter: hue-rotate(240deg); */
     margin: 0;
     padding: 0;
 }
-
 body{
     color: var(--txt_color);
-    
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background: var(--bg_color) ;
     display: flex;
@@ -23,6 +19,16 @@ body{
 }
 h1{
     font-family:'Courier New', Courier, monospace;
+}
+select {
+    width:100%;  max-width:90%;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    -webkit-appearance: none;
+  }
+button{
+    width:100%;  max-width:90%;
 }
 .main{
     display: flex;
@@ -34,43 +40,38 @@ h1{
     margin: 0.3em;
 }
 .controls{
+    width: 90vw; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2em;
     grid-template-rows: 1fr;
+    justify-items:center ;
     background: var(--dark_color);
     padding: 1em;
     box-shadow: -0.1em 0 0.4em var(--complementary_color);
     border-radius: 0.5em;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .performance{
     font-family: monospace;
     margin-left: 2.5em;
     background: #acff2f57 ;
     font-size: x-large;
-
 }
-
 table{
     animation-name: appear;
     animation-duration: 0.3s;
-   
     padding: 2em;
     font-size: larger;
 }
 td {
-    
     padding: 0.2em;
     text-align: center;
 }
 tr:hover{
-    
     background: #acff2f57 ;
     border-radius: 20px;
     box-shadow: -0.1em 0 0.4em goldenrod;
-
 }
 tr:nth-child(odd):hover{
     background: #acff2f57 ;
@@ -92,4 +93,4 @@ thead{
 @keyframes appear {
     from {transform:translateX(100vw); opacity: 0;}
     to {transform:translateX(0px); opacity: 1;}
-  }
+}

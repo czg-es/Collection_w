@@ -12,7 +12,7 @@
         <h1>Traktor collection Visualizer</h1>
         <hr></br>
         <div class="controls" id="controls">
-            <div class="genre_div">
+            <div class="c_div genre_div">
                 <h4>GENERO</h4>
                 <select name="genre_select" id="genre_select" onchange="generar_tabla(this.name,this.value)"></select>
                 <!-- <select name="bpm_select" id="bpm_select" onchange="generar_tabla(this.name,this.value)"></select> -->
@@ -23,7 +23,7 @@
             </div>
             
            
-            <div class="bpm_rango">
+            <div class="c_div bpm_rango">
                 <h4>BPM</h4>
                 <p>bpm mayor que</p>
                 <input type="text" name="bpm_menor" id="bpm_menor" value="0"></input >
@@ -31,12 +31,14 @@
                 <input type="text" name="bpm_mayor" id="bpm_mayor" value="200"></input >
                 <button name="bpm_input" onclick="generar_tabla(this.name)">VER RANGO</button>
             </div>
-            <div class="key_selects">
+            <div class="c_div key_selects">
                 <h4>CLAVE</h4>
                 <select name="key_select" id="key_select" onchange="generar_tabla(this.name,this.value)"></select>
                 <select name="key_name_select" id="key_name_select" onchange="generar_tabla(this.name,this.value)"></select>
             </div>
-            <button onclick="clean_results();generar_tabla()" onchange="generar_tabla(this.name,this.value)">TABLA COMPLETA</button>
+            <div class="c_div tabla_completa">
+                <button onclick="clean_results();generar_tabla()" onchange="generar_tabla(this.name,this.value)">TABLA COMPLETA</button>
+            </div>
         </div>
     </div>
     <div class="results" id="results"></div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traktor collection view</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main" id="main">
+        <h1>Traktor collection Visualizer</h1>
+        <hr></br>
+        <div class="controls" id="controls">
+            <div class="genre_div">
+                <h4>GENERO</h4>
+                <select name="genre_select" id="genre_select" onchange="generar_tabla(this.name,this.value)"></select>
+                <!-- <select name="bpm_select" id="bpm_select" onchange="generar_tabla(this.name,this.value)"></select> -->
+                <h4>ARTISTA</h4>
+                <select name="artist_select" id="artist_select" onchange="generar_tabla(this.name,this.value)"></select>
+                <h4>ALBUM</h4>
+                <select name="album_select" id="album_select" onchange="generar_tabla(this.name,this.value)"></select>
+            </div>
+            
+           
+            <div class="bpm_rango">
+                <h4>BPM</h4>
+                <p>bpm mayor que</p>
+                <input type="text" name="bpm_menor" id="bpm_menor" value="0"></input >
+                <p>bpm menor que</p>
+                <input type="text" name="bpm_mayor" id="bpm_mayor" value="200"></input >
+                <button name="bpm_input" onclick="generar_tabla(this.name)">VER RANGO</button>
+            </div>
+            <div class="key_selects">
+                <h4>CLAVE</h4>
+                <select name="key_select" id="key_select" onchange="generar_tabla(this.name,this.value)"></select>
+                <select name="key_name_select" id="key_name_select" onchange="generar_tabla(this.name,this.value)"></select>
+            </div>
+            <button onclick="clean_results();generar_tabla()" onchange="generar_tabla(this.name,this.value)">TABLA COMPLETA</button>
+        </div>
+    </div>
+    <div class="results" id="results"></div>
+    <script src="coll_4.js"></script>
+    <script src="main_.js"></script>
+</body>
+</html>

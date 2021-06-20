@@ -174,3 +174,25 @@ function generar_tabla(name) {
     //tabla.setAttribute("border", "1");
     console.log("genera_tabla took " + (t1 - t0) + " milliseconds."); 
     }
+    function mimic_colors(){
+        let P_bg_c = getComputedStyle(parent.document.documentElement).getPropertyValue('--bg_color');
+        document.documentElement.style.setProperty('--bg_color', P_bg_c );
+        bg_c = getComputedStyle(document.documentElement).getPropertyValue('--bg_color');
+
+        let P_dark_c = getComputedStyle(parent.document.documentElement).getPropertyValue('--dark_color');
+        document.documentElement.style.setProperty('--dark_color',P_dark_c );
+        dark_c = getComputedStyle(document.documentElement).getPropertyValue('--dark_color');
+
+        let P_text_c = getComputedStyle(parent.document.documentElement).getPropertyValue('--txt_color');
+        document.documentElement.style.setProperty('--txt_color',P_text_c );
+        text_c = getComputedStyle(document.documentElement).getPropertyValue('--txt_color');
+        
+        let P_comp_c = getComputedStyle(parent.document.documentElement).getPropertyValue('--complementary_color');
+        document.documentElement.style.setProperty('--complementary_color',P_comp_c );
+        comp_c = getComputedStyle(document.documentElement).getPropertyValue('--complementary_color');
+        
+        let P_accent_c = getComputedStyle(parent.document.documentElement).getPropertyValue('--accent_color');
+        document.documentElement.style.setProperty('--accent_color',P_accent_c );
+        accent_c = getComputedStyle(document.documentElement).getPropertyValue('--accent_color');
+   }
+
